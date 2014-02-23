@@ -1,0 +1,54 @@
+/**
+ * Classe principal do projeto Pessoa
+ * Classe responsável por executar os métodos principais
+ * @Rodrigo Costa Gonçalves
+ */
+import java.util.*;
+public class PessoaM
+{  //Classe Pessoa Instanciada
+    static Pessoa p = new Pessoa();
+    //Método principal
+    public static void main(String [] args)
+    {
+        Scanner s = new Scanner(System.in); 
+        Pessoa p = new Pessoa(); 
+        double a =0;
+        int x;
+            System.out.println("Digite a altura da Pessoa "); 
+            a = s.nextDouble();
+
+            System.out.println("Digite o peso da Pessoa "); 
+            p.peso = s.nextDouble(); 
+
+            System.out.println("Digite a idade da Pessoa "); 
+            p.idade = s.nextInt();
+             while(true){
+            System.out.println("\nComandos disponíveis :\n1) para o Pessoa envelhecer\n2) para a Pessoa comer\n3) para a Pessoa se Exercitar");
+            x = s.nextInt();
+            switch (x){
+            case 1: case1();
+                    break; 
+            case 2: case2();
+                    break; 
+            case 3: case3();
+                    break; 
+            
+            }
+            
+        }
+    } 
+    //Chama o método envelehcer da classe pessoa
+    public static void case1()
+    { 
+        p.envelhecer();
+    } 
+   //Chama o método comer da classe pessoa
+    public static void case2()
+    {   p.comer(); 
+    }  
+    //Chama o método exercitar da classe pessoa 
+    public static void case3()
+    {   p.Exercitar(); 
+    } 
+    
+}    
