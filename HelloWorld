@@ -1,9 +1,16 @@
+
 /** 
  * @Rodrigo Costa Gonçalves
  */
+import java.util.*; 
 public class HelloWorld
 {   public static void main(String [] args){
+    String username; 
     
-    System.out.println("Hello world!"); 
+    Scanner reader = new Scanner(System.in);
+    
+    System.out.println("Digite seu username!"); 
+    username = reader.next();
+    System.out.println("Hello "+ username+ "!"); 
 }
 }
