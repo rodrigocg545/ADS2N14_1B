@@ -1,0 +1,70 @@
+/**
+ * Classe auxiliar 
+ * @Rodrigo Costa Gonçalves
+ * 
+ */
+import java.util.*;
+public class Pessoa
+{
+    //Variaveis da classe Pessoa
+    public static double altura; 
+    public static double peso; 
+    public static int idade; 
+    public static double auxx;
+    Scanner s = new Scanner(System.in);
+    //Método que acrescenta 0.1 cm na altura da pessoa
+    public void crescer()
+    { 
+        altura= +0.1;
+       
+       
+        
+        
+    } 
+    //Esse método chama o método Crescer() e acrescenta um ano na idade da pessoa e aumenta 0.1 cm consequentemente
+    public void envelhecer()
+    {
+    
+        crescer();  
+        idade++; 
+        altura++;
+        System.out.println("O magrão evenlheceu: "+idade+" anos e cresceu"+ altura+" metros" ); 
+      
+        
+    
+    } 
+    //Método em que a pessoa pode escolher seu alimento com base no valor calórico
+    public void comer()
+    {
+        System.out.print("Escolha sua comida:\n1) Alaminuta(1000 ka)\n2) Salada verde(100 ka)\n3) big mac (2000 ka)");
+        auxx = s.nextDouble(); 
+        if(auxx==1){
+        peso = +0.5; 
+        System.out.print("A pessoa engordou " +peso+ " kilos"); 
+        peso++;
+     }
+        
+        if(auxx==2){
+        peso = +0.2; 
+        System.out.print("A pessoa engordou " +peso+ " kilos"); 
+        peso++;
+     }
+     if(auxx==3){
+        peso = +1; 
+        System.out.print("A pessoa engordou " +peso+ " kilos"); 
+        peso++;
+     }
+    } 
+    // Neste método a pessoa emagrece se exercitando 
+    public void Exercitar(){
+    peso--; 
+    auxx = peso;
+    System.out.print("Digite quantos kilometros a pessoa correu\n");
+    auxx = s.nextDouble(); 
+    if( auxx>10){ 
+     System.out.println("Você não pode correr tanto"); 
+   
+    }else System.out.println("Pessoa,você emagreceu: "+auxx+ " Kilos"); 
+    
+    }
+}
